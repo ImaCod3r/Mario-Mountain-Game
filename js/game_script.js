@@ -7,6 +7,8 @@ const pontuacao = document.querySelector('.pontos');
 var pontos = 0;
 var perdeu = false; 
 var evento = 'keydown';
+var jump_sound = new Audio('assets/sons/jump_sound.mp3');
+var gameOver_sound = new Audio('assets/sons/gameOver.mp3')
 
 // 3. Funcoes 
 
@@ -14,6 +16,7 @@ var evento = 'keydown';
 const jump = () =>{
 
     mario.classList.add('jump');
+    jump_sound.play();
 
     setTimeout(() =>{
 
@@ -54,7 +57,7 @@ const loop = setInterval(() =>{
 
             clearInterval(loop);
             perdeu = true;
-
+            gameOver_sound.play();
             }
         
         }
@@ -75,6 +78,7 @@ const loop = setInterval(() =>{
 
                 clearInterval(loop);
                 perdeu = true;
+                gameOver_sound.play();
                 }
            
         }
