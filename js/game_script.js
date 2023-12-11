@@ -75,8 +75,8 @@ const loop = setInterval(() =>{
             mario.style.bottom = `${posicaoMario}px`;
             mario.src = 'assets/game-over.png';
 
-            mario.style.width = '50px';
-            mario.style.marginLeft = '35px';
+            mario.style.width = '40px';
+            mario.style.marginLeft = '30px';
 
             clearInterval(loop);
             perdeu = true;
