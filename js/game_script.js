@@ -7,8 +7,8 @@ const pontuacao = document.querySelector('.pontos');
 var pontos = 0;
 var perdeu = false; 
 var evento = 'keydown';
-var jump_sound = new Audio('assets/sons/jump_sound.mp3');
-var gameOver_sound = new Audio('assets/sons/gameOver.mp3')
+var jump_sound = new Audio('assets/Sons/jump_sound.mp3');
+var gameOver_sound = new Audio('assets/Sons/gameOver.mp3')
 
 // 3. Funcoes 
 
