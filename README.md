@@ -14,7 +14,7 @@
 ## 🎮 Jogo
 
 <p align="center">
-  <img alt="Captura de tela" src=".github/preview.jpg" width="100%">
+  <img alt="Captura de tela" src="assets/preview.jpg" width="100%">
 </p>
 
 ## 🚀 Tecnologias
