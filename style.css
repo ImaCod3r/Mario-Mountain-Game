@@ -12,6 +12,9 @@ body{
     justify-content: center;
     align-items: center;
 }
+body * {
+    font-family: 'Pixelify Sans', sans-serif;
+}
 .gameBoard{
     width: 100%;
     height: 100vh;
@@ -44,7 +47,37 @@ body{
     margin: 30px;
     color: #ffff;
     font-size: 26px;
-    font-family: 'Pixelify Sans', sans-serif;
+
+}
+.reiniciar{
+    width: 100%;
+    height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.reiniciar div{
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: #2a041d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;    
+}
+.reiniciar div span{
+    margin: 10px;
+    font-size: 22px;
+    color: #ffff;
+}
+.reiniciar div button{
+    padding: 10px;
+    background-color: #ffff;
+    color: #2a041d;
+    border: none;
+    border-radius: 10px;
 }
 .plataforma{
     width: 100%;
@@ -105,5 +138,12 @@ body{
     .pontuacao{
         margin: 10px;
         font-size: 20px;
+    }
+    .reiniciar{
+        align-items: baseline;
+    }
+    .reiniciar div{
+        margin: 50px 0;
+        width: 200px;
     }
 }
