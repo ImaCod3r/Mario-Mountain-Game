@@ -38,28 +38,47 @@ const loop = setInterval(() =>{
 
     const posicaoPedra = pedra.offsetLeft;
     const posicaoMario = +window.getComputedStyle(mario).bottom.replace('px',' ');
+    if(window.innerWidth <= 750){
+            
+        if(posicaoPedra <= 50 && posicaoPedra > 0 && posicaoMario < 50){
 
-    if(posicaoPedra <= 70 && posicaoPedra > 0 && posicaoMario < 90){
+            pedra.style.animation = 'none';
+            pedra.style.left = `${posicaoPedra}px`;
 
-        pedra.style.animation = 'none';
-        pedra.style.left = `${posicaoPedra}px`;
+            mario.style.animation = 'none';
+            mario.style.bottom = `${posicaoMario}px`;
+            mario.src = 'assets/game-over.png';
 
-        mario.style.animation = 'none';
-        mario.style.bottom = `${posicaoMario}px`;
-
-        mario.src = 'assets/game-over.png';
-        if(window.innerWidth <= 750){
             mario.style.width = '20px';
             mario.style.marginLeft = '50px';
+
+            clearInterval(loop);
+            perdeu = true;
+
+            }
+        
         }
+        
         else{
-            mario.style.width = '50px';
-            mario.style.marginLeft = '30px';
+            
+            if(posicaoPedra <= 70 && posicaoPedra > 0 && posicaoMario < 90){
+
+                pedra.style.animation = 'none';
+                pedra.style.left = `${posicaoPedra}px`;
+    
+                mario.style.animation = 'none';
+                mario.style.bottom = `${posicaoMario}px`;
+                mario.src = 'assets/game-over.png';
+
+                mario.style.width = '50px';
+                mario.style.marginLeft = '30px';
+
+                clearInterval(loop);
+                perdeu = true;
+                }
+           
         }
 
-        clearInterval(loop);
-        perdeu = true;
-    }
 },10);
 
 
